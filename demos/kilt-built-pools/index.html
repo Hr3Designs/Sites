@@ -1,253 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kilt Built Pools | Pool Builders in Chattanooga, TN</title>
-<meta name="description" content="Kilt Built Pools — 38 years of pool construction, renovations and weekly maintenance in Chattanooga, TN. Call (423) 593-3332 for a free estimate.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kilt Built Pools | Pool Builders · Chattanooga, TN</title>
+<meta name="description" content="Kilt Built Pools — 38 years of fiberglass & vinyl pool construction, renovation and weekly maintenance in Chattanooga, TN. Call (423) 593-3332.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --pine:#0e2a3f;
-  --pine-deep:#0e2a3fcc;
-  --moss:#1b4965;
-  --bark:#38a8d8;
-  --paper:#f5f8fa;
-  --paper-warm:#e8eff4;
-  --ink:#122230;
-  --ink-soft:#50616e;
-  --line:#d3dee6;
-}
+:root{--navy:#0b2436;--navy2:#0f3049;--aqua:#46c4ea;--foam:#f2f8fb;--mut:#5c7283;--line:#d5e4ed}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;font-weight:300;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-.serif{font-family:'Sora',serif}
-.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
-a{color:inherit}
-
-/* ---------- preview ribbon ---------- */
-.ribbon{background:var(--ink);color:var(--paper);font-size:.78rem;letter-spacing:.04em;text-align:center;padding:9px 16px}
-.ribbon a{color:#cdd9c4;text-decoration:underline;text-underline-offset:3px}
-
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(244,242,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-.mark{display:flex;align-items:center;gap:11px;text-decoration:none}
-.mark svg{width:30px;height:30px}
-.mark b{font-family:'Sora',serif;font-weight:500;font-size:1.16rem;letter-spacing:.01em}
-.nav-links{display:flex;gap:34px;font-size:.9rem;font-weight:400;color:var(--ink-soft)}
-.nav-links a{text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-.nav-call{display:flex;align-items:center;gap:10px;background:var(--pine);color:var(--paper);text-decoration:none;padding:11px 22px;border-radius:99px;font-size:.9rem;font-weight:500;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s}
-.nav-call:hover{background:var(--moss)}
-.nav-call:active{transform:scale(.97)}
-@media(max-width:880px){.nav-links{display:none}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:92dvh;display:flex;align-items:flex-end;color:var(--paper);isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;z-index:-2;transform:scale(1.04)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(170deg,rgba(20,28,17,.28) 0%,rgba(20,28,17,.45) 55%,rgba(18,25,15,.88) 100%);z-index:-1}
-.hero-in{width:100%;padding-bottom:clamp(48px,8vh,96px);display:grid;grid-template-columns:minmax(0,7.5fr) minmax(0,4.5fr);gap:48px;align-items:end}
-.hero h1{font-family:'Sora',serif;font-weight:400;font-size:clamp(2.5rem,5.6vw,4.6rem);line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
-.hero h1 i{font-style:italic;color:#9bd8f2}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:#cfd8c2;margin-bottom:22px}
-.kicker::before{content:"";width:34px;height:1px;background:#cfd8c2;display:inline-block}
-.hero-side p{font-size:1.02rem;color:#e6e4d8;max-width:34ch;margin-bottom:26px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
-.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:.95rem;padding:15px 30px;border-radius:99px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s,border-color .25s}
-.btn:active{transform:scale(.97)}
-.btn-solid{background:var(--paper);color:var(--ink)}
-.btn-solid:hover{background:#fff}
-.btn-line{border:1px solid rgba(244,242,236,.45);color:var(--paper)}
-.btn-line:hover{border-color:var(--paper)}
-.reveal{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
-.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
-@keyframes rise{to{opacity:1;transform:none}}
-@media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:30px}.hero{min-height:88dvh}}
-
-/* ---------- trust strip ---------- */
-.strip{border-bottom:1px solid var(--line);background:var(--paper)}
-.strip-in{display:grid;grid-template-columns:repeat(4,1fr);}
-.strip-item{padding:26px 18px;text-align:left;border-left:1px solid var(--line)}
-.strip-item:first-child{border-left:none}
-.strip-item b{font-family:'Sora',serif;font-weight:500;font-size:1.5rem;display:block;color:var(--pine)}
-.strip-item span{font-size:.84rem;color:var(--ink-soft)}
-@media(max-width:760px){.strip-in{grid-template-columns:repeat(2,1fr)}.strip-item:nth-child(3){border-left:none}}
-
-/* ---------- sections ---------- */
-section{padding:clamp(72px,9vw,120px) 0}
-.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
-.sec-head h2{font-family:'Sora',serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.12;letter-spacing:-.01em}
-.sec-head p{color:var(--ink-soft);max-width:46ch;justify-self:end}
-@media(max-width:760px){.sec-head{grid-template-columns:1fr}.sec-head p{justify-self:start}}
-
-/* services — bordered list, no card grid */
-.svc{border-top:1px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:64px minmax(0,4fr) minmax(0,6fr) auto;gap:28px;align-items:center;padding:30px 6px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .25s}
-.svc-row:hover{background:var(--paper-warm)}
-.svc-num{font-family:'Sora',serif;color:var(--bark);font-size:.95rem}
-.svc-row h3{font-family:'Sora',serif;font-weight:500;font-size:1.35rem}
-.svc-row p{color:var(--ink-soft);font-size:.95rem}
-.svc-arrow{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .3s cubic-bezier(.16,1,.3,1),background .25s}
-.svc-row:hover .svc-arrow{transform:translateX(5px);background:var(--pine)}
-.svc-row:hover .svc-arrow svg{stroke:var(--paper)}
-@media(max-width:760px){.svc-row{grid-template-columns:1fr;gap:8px}.svc-arrow{display:none}}
-
-/* work — asymmetric split */
-.work{background:var(--pine);color:var(--paper)}
-.work .sec-head h2{color:var(--paper)}
-.work .sec-head p{color:#c9d2bd}
-.work-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px}
-.ph{border-radius:18px;overflow:hidden;position:relative;background:#0e2a3f}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
-.ph:hover img{transform:scale(1.035)}
-.ph-tall{grid-row:span 2;min-height:520px}
-.ph-sm{min-height:248px}
-.ph figcaption{position:absolute;left:18px;bottom:14px;font-size:.8rem;letter-spacing:.06em;background:rgba(18,25,15,.6);backdrop-filter:blur(6px);padding:7px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.12)}
-@media(max-width:760px){.work-grid{grid-template-columns:1fr}.ph-tall{min-height:340px}}
-
-/* word from owner / review */
-.quote-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,72px);align-items:center}
-.quote-grid blockquote{font-family:'Sora',serif;font-size:clamp(1.3rem,2.3vw,1.85rem);line-height:1.4;font-weight:400;letter-spacing:-.005em;text-wrap:balance}
-.quote-grid blockquote em{font-style:italic;color:var(--moss)}
-.attr{margin-top:22px;font-family:'Outfit',sans-serif;font-size:.88rem;color:var(--ink-soft)}
-.attr b{display:block;font-weight:500;color:var(--ink);font-size:.95rem}
-.quote-side{border-left:1px solid var(--line);padding-left:clamp(24px,3vw,48px);display:grid;gap:26px}
-.quote-side h3{font-family:'Sora',serif;font-weight:500;font-size:1.1rem;margin-bottom:6px}
-.quote-side p{color:var(--ink-soft);font-size:.95rem;max-width:52ch}
-@media(max-width:760px){.quote-grid{grid-template-columns:1fr}.quote-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
-
-/* contact */
-.contact{background:var(--paper-warm);border-top:1px solid var(--line)}
-.contact-in{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(36px,6vw,90px)}
-.contact h2{font-family:'Sora',serif;font-weight:400;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:18px}
-.contact .lead{color:var(--ink-soft);max-width:44ch;margin-bottom:34px}
-.tel{font-family:'Sora',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;color:var(--pine);text-decoration:none;border-bottom:2px solid var(--bark);padding-bottom:2px}
-.hours{display:grid;gap:0;border-top:1px solid var(--line)}
-.hours div{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line);font-size:.92rem}
-.hours span{color:var(--ink-soft)}
-.hours b{font-weight:500}
-@media(max-width:760px){.contact-in{grid-template-columns:1fr}}
-
-footer{padding:34px 0;font-size:.82rem;color:var(--ink-soft)}
-.foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+body{background:var(--foam);color:#10293c;font-family:'Outfit',sans-serif;font-weight:300;line-height:1.65}
+.sora{font-family:'Sora',sans-serif}
+.ribbon{background:var(--navy);color:#cfe9f5;font-size:.78rem;text-align:center;padding:9px 14px}
+.ribbon a{color:var(--aqua)}
+/* glass hero */
+.hero{position:relative;min-height:100dvh;isolation:isolate;display:flex;flex-direction:column}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2000&auto=format&fit=crop') center/cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,28,43,.55),rgba(8,28,43,.15) 40%,rgba(8,28,43,.7));z-index:-1}
+.topnav{display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,60px);color:#fff}
+.topnav .lg{font-family:'Sora';font-weight:700;letter-spacing:.04em}
+.topnav .lg span{color:var(--aqua)}
+.topnav a{color:#fff;text-decoration:none;font-size:.9rem;border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:10px 22px}
+.hero .spacer{flex:1}
+.glass{margin:0 auto 7vh;width:min(92%,760px);text-align:center;color:#fff;background:rgba(13,38,56,.42);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 30px 60px rgba(0,0,0,.35);border-radius:28px;padding:clamp(30px,5vw,54px)}
+.glass .est{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua)}
+.glass h1{font-family:'Sora';font-weight:600;font-size:clamp(1.9rem,4.4vw,3.3rem);line-height:1.15;margin:16px 0}
+.glass p{color:#cfe2ee;max-width:52ch;margin:0 auto 26px}
+.glass .row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.gb{text-decoration:none;font-weight:500;border-radius:99px;padding:14px 30px;font-size:.95rem}
+.gb1{background:var(--aqua);color:#06222f}
+.gb2{border:1px solid rgba(255,255,255,.5);color:#fff}
+/* numbers row */
+.nums{background:var(--navy);color:#fff;display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.nums div{padding:38px 16px;border-left:1px solid rgba(255,255,255,.08)}
+.nums div:first-child{border-left:none}
+.nums b{font-family:'Sora';font-size:2.1rem;font-weight:700;color:var(--aqua);display:block}
+.nums span{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#9db8c8}
+/* services horizontal scroll */
+section{padding:clamp(64px,8vw,108px) clamp(20px,5vw,60px)}
+h2{font-family:'Sora';font-weight:600;font-size:clamp(1.7rem,3.2vw,2.5rem);color:var(--navy)}
+.lead{color:var(--mut);max-width:54ch;margin:12px 0 38px}
+.scroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,340px);gap:20px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x mandatory}
+.sc{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;scroll-snap-align:start}
+.sc img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.sc .in{padding:24px}
+.sc h3{font-family:'Sora';font-weight:600;font-size:1.12rem;color:var(--navy)}
+.sc p{color:var(--mut);font-size:.92rem;margin-top:8px}
+/* quote + contact */
+.q{background:var(--navy2);color:#fff;text-align:center}
+.q p{font-family:'Sora';font-weight:400;font-size:clamp(1.25rem,2.6vw,1.9rem);max-width:30ch;margin:0 auto;line-height:1.45}
+.q em{color:var(--aqua);font-style:normal}
+.q span{display:block;margin-top:16px;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb3c6}
+.contact{text-align:center}
+.contact .tel{font-family:'Sora';font-weight:700;font-size:clamp(2rem,5vw,3.4rem);color:var(--navy);text-decoration:none}
+.contact .tel b{color:var(--aqua)}
+.contact p{color:var(--mut);margin-top:14px}
+.hrs{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:24px;font-size:.9rem;color:var(--mut)}
+.hrs b{color:var(--navy);font-weight:500}
+footer{border-top:1px solid var(--line);padding:26px;text-align:center;font-size:.8rem;color:var(--mut)}
 </style>
 </head>
 <body>
-
-<div class="ribbon">Free design preview built for Kilt Built Pools by Hugh Rudolph Web Design · Want it live on your domain? <a href="mailto:h3.rudolph@gmail.com">h3.rudolph@gmail.com</a></div>
-
-<nav><div class="wrap nav-in">
-  <a class="mark" href="#">
-    <svg viewBox="0 0 32 32" fill="none"><path d="M16 28C16 18 10 14 4 14c0 8 5 14 12 14zm0 0c0-10 6-14 12-14 0 8-5 14-12 14zm0-2V4" stroke="#0e2a3f" stroke-width="2.2" stroke-linecap="round"/></svg>
-    <b>Kilt Built</b>
-  </a>
-  <div class="nav-links">
-    <a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a>
-  </div>
-  <a class="nav-call" href="tel:4235933332">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    (423) 593-3332
-  </a>
-</div></nav>
-
+<div class="ribbon">Free preview built for Kilt Built Pools by Hugh Rudolph Web Design · <a href="mailto:h3.rudolph@gmail.com">h3.rudolph@gmail.com</a></div>
 <header class="hero">
-  <div class="wrap hero-in">
-    <div>
-      <div class="kicker reveal d1">Chattanooga, TN · Est. 1988</div>
-      <h1 class="reveal d2">Backyards worth <i>diving into</i> — pools built right for 38 years.</h1>
-    </div>
-    <div class="hero-side reveal d3">
-      <p>Pool construction, renovations and weekly maintenance for homes and businesses across the Chattanooga area. Free estimates, usually within the week.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-solid" href="tel:4235933332">Call (423) 593-3332</a>
-        <a class="btn btn-line" href="#services">What we do</a>
-      </div>
-    </div>
+  <div class="topnav"><div class="lg">KILT BUILT<span>.</span></div><a href="tel:4235933332">(423) 593-3332</a></div>
+  <div class="spacer"></div>
+  <div class="glass">
+    <div class="est">Est. 1988 · Chattanooga</div>
+    <h1>Backyards worth diving into.</h1>
+    <p>Fiberglass &amp; vinyl pool construction, renovations and weekly maintenance — 38 years of pools built right. When quality counts, count on us.</p>
+    <div class="row"><a class="gb gb1" href="tel:4235933332">Get a free estimate</a><a class="gb gb2" href="#services">Our work</a></div>
   </div>
 </header>
-
-<div class="strip"><div class="wrap strip-in">
-  <div class="strip-item"><b>38 yrs</b><span>Serving Chattanooga</span></div>
-  <div class="strip-item"><b>Local</b><span>Owned &amp; operated</span></div>
-  <div class="strip-item"><b>Free</b><span>On-site estimates</span></div>
-  <div class="strip-item"><b>Insured</b><span>Licensed crew</span></div>
-</div></div>
-
-<section id="services"><div class="wrap">
-  <div class="sec-head">
-    <h2>What we do, season after season</h2>
-    <p>One crew, start to finish. No subcontractor roulette — the people who quote your project are the ones who show up to build it.</p>
+<div class="nums">
+  <div><b>38</b><span>Years building</span></div>
+  <div><b>100%</b><span>Free estimates</span></div>
+  <div><b>Local</b><span>Owned &amp; operated</span></div>
+</div>
+<section id="services">
+  <h2>From first dig to every-week sparkle</h2>
+  <p class="lead">One company for the whole life of your pool — design, build, renovate, maintain.</p>
+  <div class="scroll">
+    <div class="sc"><img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1000&auto=format&fit=crop" alt="New pool construction"><div class="in"><h3>Design &amp; construction</h3><p>Fiberglass and vinyl builds shaped around your yard, budget and family.</p></div></div>
+    <div class="sc"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1000&auto=format&fit=crop" alt="Pool renovation"><div class="in"><h3>Renovations &amp; repairs</h3><p>Liner replacement, resurfacing and equipment fixes — vinyl liner specialists.</p></div></div>
+    <div class="sc"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1000&auto=format&fit=crop" alt="Poolside landscaping"><div class="in"><h3>Weekly maintenance</h3><p>Cleaning, chemicals and checks on schedule — the pool's just ready when you are.</p></div></div>
   </div>
-  <div class="svc">
-    <a class="svc-row" href="tel:4235933332">
-      <span class="svc-num">01</span><h3>Pool design &amp; construction</h3>
-      <p>Fiberglass and vinyl builds designed around your yard, your budget, and how your family will actually use it.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e2a3f" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-    <a class="svc-row" href="tel:4235933332">
-      <span class="svc-num">02</span><h3>Renovations &amp; repairs</h3>
-      <p>Liner replacement, resurfacing and equipment fixes that bring an aging pool back to life.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e2a3f" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-    <a class="svc-row" href="tel:4235933332">
-      <span class="svc-num">03</span><h3>Weekly maintenance</h3>
-      <p>Cleaning, chemicals and checks on a schedule, so the pool is just ready when you are.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0e2a3f" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-  </div>
-</div></section>
-
-<section class="work" id="work"><div class="wrap">
-  <div class="sec-head">
-    <h2>Recent work around Chattanooga</h2>
-    <p>A few projects from the past few seasons. Photos go here — we'll swap in your real project shots.</p>
-  </div>
-  <div class="work-grid">
-    <figure class="ph ph-tall"><img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1400&auto=format&fit=crop" alt="New pool build" loading="lazy"><figcaption>New build</figcaption></figure>
-    <figure class="ph ph-sm"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Pool renovation" loading="lazy"><figcaption>Renovation</figcaption></figure>
-    <figure class="ph ph-sm"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop" alt="Poolside landscaping" loading="lazy"><figcaption>Poolside landscaping</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="about"><div class="wrap quote-grid">
-  <div>
-    <blockquote>"When quality counts, <em>count on us.</em> That has been the promise here since 1988."</blockquote>
-    <div class="attr"><b>The Kilt Built promise</b>Kilt Built Pools</div>
-  </div>
-  <div class="quote-side">
-    <div>
-      <h3>Local, not a franchise</h3>
-      <p>Kilt Built Pools has been Chattanooga-owned since 1988. When you call, you talk to someone who has stood in a backyard like yours that morning.</p>
-    </div>
-    <div>
-      <h3>Straight quotes</h3>
-      <p>We walk the property, give you a number, and stick to it. No surprise line items after the work starts.</p>
-    </div>
-  </div>
-</div></section>
-
-<section class="contact" id="contact"><div class="wrap contact-in">
-  <div>
-    <h2>Get a free estimate this week</h2>
-    <p class="lead">Call or text — tell us what you're picturing, and we'll come take a look. No pressure, no obligation.</p>
-    <a class="tel" href="tel:4235933332">(423) 593-3332</a>
-  </div>
-  <div>
-    <div class="hours">
-      <div><span>Monday – Friday</span><b>8:00a – 6:00p</b></div>
-      <div><span>Saturday</span><b>8:00a – 5:00p</b></div>
-      <div><span>Sunday</span><b>Closed</b></div>
-      <div><span>Service area</span><b>Chattanooga &amp; surrounding</b></div>
-    </div>
-  </div>
-</div></section>
-
-<footer><div class="wrap foot-in">
-  <div>© 2026 Kilt Built Pools · Chattanooga, TN</div>
-  <div>(423) 593-3332</div>
-</div></footer>
-
+</section>
+<section class="q"><p>"When quality counts, <em>count on us.</em> The promise since 1988."</p><span>Kilt Built Pools</span></section>
+<section class="contact">
+  <h2>Let's talk about your backyard</h2>
+  <p>Call for a free, no-pressure estimate.</p><br>
+  <a class="tel" href="tel:4235933332">(423) 593-<b>3332</b></a>
+  <div class="hrs"><div>Mon–Fri <b>8a – 6p</b></div><div>Sat <b>8a – 5p</b></div><div>Sun <b>Closed</b></div></div>
+</section>
+<footer>© 2026 Kilt Built Pools · Chattanooga, TN · (423) 593-3332</footer>
 </body>
 </html>

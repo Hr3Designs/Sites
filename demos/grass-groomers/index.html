@@ -1,253 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grass Groomers Lawn &amp; Landscape | Landscaping in Chattanooga, TN</title>
-<meta name="description" content="Grass Groomers Lawn &amp; Landscape — 13 years of landscape design, installation and lawn care in Chattanooga, TN. Call (423) 297-6770 for a free estimate.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grass Groomers Lawn &amp; Landscape | Chattanooga, TN</title>
+<meta name="description" content="Grass Groomers — lawn and landscape care in Chattanooga, TN. Open every day. Call (423) 297-6770.">
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --pine:#3a5743;
-  --pine-deep:#3a5743cc;
-  --moss:#5c7a63;
-  --bark:#9caf88;
-  --paper:#f8faf5;
-  --paper-warm:#eef2e6;
-  --ink:#232b22;
-  --ink-soft:#5d685c;
-  --line:#d7dfd0;
-}
+:root{--sage:#5c7a63;--deep:#39503f;--cream:#fbfcf8;--mist:#eef2e8;--ink:#28302a;--mut:#67726a;--line:#dde4d6}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Karla',sans-serif;font-weight:300;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--cream);color:var(--ink);font-family:'Karla',sans-serif;font-weight:300;line-height:1.7}
 .serif{font-family:'Marcellus',serif}
-.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
-a{color:inherit}
-
-/* ---------- preview ribbon ---------- */
-.ribbon{background:var(--ink);color:var(--paper);font-size:.78rem;letter-spacing:.04em;text-align:center;padding:9px 16px}
-.ribbon a{color:#cdd9c4;text-decoration:underline;text-underline-offset:3px}
-
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(244,242,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-.mark{display:flex;align-items:center;gap:11px;text-decoration:none}
-.mark svg{width:30px;height:30px}
-.mark b{font-family:'Marcellus',serif;font-weight:500;font-size:1.16rem;letter-spacing:.01em}
-.nav-links{display:flex;gap:34px;font-size:.9rem;font-weight:400;color:var(--ink-soft)}
-.nav-links a{text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-.nav-call{display:flex;align-items:center;gap:10px;background:var(--pine);color:var(--paper);text-decoration:none;padding:11px 22px;border-radius:99px;font-size:.9rem;font-weight:500;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s}
-.nav-call:hover{background:var(--moss)}
-.nav-call:active{transform:scale(.97)}
-@media(max-width:880px){.nav-links{display:none}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:92dvh;display:flex;align-items:flex-end;color:var(--paper);isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;z-index:-2;transform:scale(1.04)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(170deg,rgba(20,28,17,.28) 0%,rgba(20,28,17,.45) 55%,rgba(18,25,15,.88) 100%);z-index:-1}
-.hero-in{width:100%;padding-bottom:clamp(48px,8vh,96px);display:grid;grid-template-columns:minmax(0,7.5fr) minmax(0,4.5fr);gap:48px;align-items:end}
-.hero h1{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.5rem,5.6vw,4.6rem);line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
-.hero h1 i{font-style:italic;color:#cfe0b8}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:#cfd8c2;margin-bottom:22px}
-.kicker::before{content:"";width:34px;height:1px;background:#cfd8c2;display:inline-block}
-.hero-side p{font-size:1.02rem;color:#e6e4d8;max-width:34ch;margin-bottom:26px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
-.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:.95rem;padding:15px 30px;border-radius:99px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s,border-color .25s}
-.btn:active{transform:scale(.97)}
-.btn-solid{background:var(--paper);color:var(--ink)}
-.btn-solid:hover{background:#fff}
-.btn-line{border:1px solid rgba(244,242,236,.45);color:var(--paper)}
-.btn-line:hover{border-color:var(--paper)}
-.reveal{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
-.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
-@keyframes rise{to{opacity:1;transform:none}}
-@media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:30px}.hero{min-height:88dvh}}
-
-/* ---------- trust strip ---------- */
-.strip{border-bottom:1px solid var(--line);background:var(--paper)}
-.strip-in{display:grid;grid-template-columns:repeat(4,1fr);}
-.strip-item{padding:26px 18px;text-align:left;border-left:1px solid var(--line)}
-.strip-item:first-child{border-left:none}
-.strip-item b{font-family:'Marcellus',serif;font-weight:500;font-size:1.5rem;display:block;color:var(--pine)}
-.strip-item span{font-size:.84rem;color:var(--ink-soft)}
-@media(max-width:760px){.strip-in{grid-template-columns:repeat(2,1fr)}.strip-item:nth-child(3){border-left:none}}
-
-/* ---------- sections ---------- */
-section{padding:clamp(72px,9vw,120px) 0}
-.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
-.sec-head h2{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.12;letter-spacing:-.01em}
-.sec-head p{color:var(--ink-soft);max-width:46ch;justify-self:end}
-@media(max-width:760px){.sec-head{grid-template-columns:1fr}.sec-head p{justify-self:start}}
-
-/* services — bordered list, no card grid */
-.svc{border-top:1px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:64px minmax(0,4fr) minmax(0,6fr) auto;gap:28px;align-items:center;padding:30px 6px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .25s}
-.svc-row:hover{background:var(--paper-warm)}
-.svc-num{font-family:'Marcellus',serif;color:var(--bark);font-size:.95rem}
-.svc-row h3{font-family:'Marcellus',serif;font-weight:500;font-size:1.35rem}
-.svc-row p{color:var(--ink-soft);font-size:.95rem}
-.svc-arrow{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .3s cubic-bezier(.16,1,.3,1),background .25s}
-.svc-row:hover .svc-arrow{transform:translateX(5px);background:var(--pine)}
-.svc-row:hover .svc-arrow svg{stroke:var(--paper)}
-@media(max-width:760px){.svc-row{grid-template-columns:1fr;gap:8px}.svc-arrow{display:none}}
-
-/* work — asymmetric split */
-.work{background:var(--pine);color:var(--paper)}
-.work .sec-head h2{color:var(--paper)}
-.work .sec-head p{color:#c9d2bd}
-.work-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px}
-.ph{border-radius:18px;overflow:hidden;position:relative;background:#3a5743}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
-.ph:hover img{transform:scale(1.035)}
-.ph-tall{grid-row:span 2;min-height:520px}
-.ph-sm{min-height:248px}
-.ph figcaption{position:absolute;left:18px;bottom:14px;font-size:.8rem;letter-spacing:.06em;background:rgba(18,25,15,.6);backdrop-filter:blur(6px);padding:7px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.12)}
-@media(max-width:760px){.work-grid{grid-template-columns:1fr}.ph-tall{min-height:340px}}
-
-/* word from owner / review */
-.quote-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,72px);align-items:center}
-.quote-grid blockquote{font-family:'Marcellus',serif;font-size:clamp(1.3rem,2.3vw,1.85rem);line-height:1.4;font-weight:400;letter-spacing:-.005em;text-wrap:balance}
-.quote-grid blockquote em{font-style:italic;color:var(--moss)}
-.attr{margin-top:22px;font-family:'Karla',sans-serif;font-size:.88rem;color:var(--ink-soft)}
-.attr b{display:block;font-weight:500;color:var(--ink);font-size:.95rem}
-.quote-side{border-left:1px solid var(--line);padding-left:clamp(24px,3vw,48px);display:grid;gap:26px}
-.quote-side h3{font-family:'Marcellus',serif;font-weight:500;font-size:1.1rem;margin-bottom:6px}
-.quote-side p{color:var(--ink-soft);font-size:.95rem;max-width:52ch}
-@media(max-width:760px){.quote-grid{grid-template-columns:1fr}.quote-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
-
+.wrap{max-width:1140px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.ribbon{background:var(--mist);color:var(--deep);font-size:.78rem;text-align:center;padding:9px 14px;border-bottom:1px solid var(--line)}
+.ribbon a{color:var(--deep)}
+/* masthead */
+.mast{text-align:center;padding:34px 0 26px;border-bottom:1px solid var(--line)}
+.mast .name{font-family:'Marcellus',serif;font-size:1.7rem;letter-spacing:.04em;color:var(--deep)}
+.mast nav{margin-top:14px;display:flex;justify-content:center;gap:30px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+.mast a{color:var(--mut);text-decoration:none}
+.mast a:hover{color:var(--deep)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center;padding:clamp(56px,8vw,100px) 0}
+.hero .kick{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sage);margin-bottom:20px}
+.hero h1{font-family:'Marcellus',serif;font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.12;font-weight:400}
+.hero p{margin-top:22px;color:var(--mut);max-width:48ch}
+.hero .btns{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+.b{display:inline-block;text-decoration:none;padding:14px 30px;border-radius:99px;font-weight:500;font-size:.95rem;transition:transform .2s}
+.b:active{transform:scale(.97)}
+.b1{background:var(--deep);color:var(--cream)}
+.b2{border:1px solid var(--sage);color:var(--deep)}
+.frame{position:relative}
+.frame img{width:100%;border-radius:200px 200px 24px 24px;aspect-ratio:4/5.1;object-fit:cover;display:block}
+.frame::after{content:"";position:absolute;inset:-14px;border:1px solid var(--sage);border-radius:210px 210px 30px 30px;pointer-events:none}
+.frame .badge{position:absolute;left:-18px;bottom:34px;background:var(--cream);border:1px solid var(--line);border-radius:99px;padding:12px 22px;font-size:.85rem;box-shadow:0 12px 28px rgba(57,80,63,.12)}
+.frame .badge b{color:var(--deep);font-weight:600}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+/* zigzag services */
+.zz{display:grid;gap:clamp(48px,6vw,84px);padding-bottom:clamp(64px,8vw,110px)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:center}
+.row.rev .txt{order:-1}
+.row img{width:100%;border-radius:20px;aspect-ratio:16/10.5;object-fit:cover;display:block}
+.row h3{font-family:'Marcellus',serif;font-size:1.6rem;font-weight:400;color:var(--deep)}
+.row .no{font-size:.78rem;letter-spacing:.24em;color:var(--sage);text-transform:uppercase;display:block;margin-bottom:12px}
+.row p{margin-top:12px;color:var(--mut);max-width:46ch}
+.row a{display:inline-block;margin-top:18px;color:var(--deep);font-weight:500;text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:2px}
+@media(max-width:800px){.row{grid-template-columns:1fr}.row.rev .txt{order:0}}
+/* quote band */
+.quote{background:var(--mist);padding:clamp(56px,7vw,92px) 0;text-align:center}
+.quote p{font-family:'Marcellus',serif;font-size:clamp(1.3rem,2.6vw,1.9rem);max-width:30ch;margin:0 auto;line-height:1.4;color:var(--deep)}
+.quote span{display:block;margin-top:18px;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
 /* contact */
-.contact{background:var(--paper-warm);border-top:1px solid var(--line)}
-.contact-in{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(36px,6vw,90px)}
-.contact h2{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:18px}
-.contact .lead{color:var(--ink-soft);max-width:44ch;margin-bottom:34px}
-.tel{font-family:'Marcellus',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;color:var(--pine);text-decoration:none;border-bottom:2px solid var(--bark);padding-bottom:2px}
-.hours{display:grid;gap:0;border-top:1px solid var(--line)}
-.hours div{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line);font-size:.92rem}
-.hours span{color:var(--ink-soft)}
-.hours b{font-weight:500}
-@media(max-width:760px){.contact-in{grid-template-columns:1fr}}
-
-footer{padding:34px 0;font-size:.82rem;color:var(--ink-soft)}
-.foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.contact{text-align:center;padding:clamp(64px,9vw,120px) 0}
+.contact h2{font-family:'Marcellus',serif;font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:400;color:var(--deep)}
+.contact p{color:var(--mut);margin:14px auto 30px;max-width:46ch}
+.contact .tel{font-family:'Marcellus',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--deep);text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:4px}
+.contact .open{margin-top:26px;display:inline-flex;align-items:center;gap:9px;font-size:.85rem;color:var(--sage);border:1px solid var(--line);border-radius:99px;padding:9px 20px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sage);animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.35}}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:.8rem;color:var(--mut)}
 </style>
 </head>
 <body>
-
-<div class="ribbon">Free design preview built for Grass Groomers Lawn &amp; Landscape by Hugh Rudolph Web Design · Want it live on your domain? <a href="mailto:h3.rudolph@gmail.com">h3.rudolph@gmail.com</a></div>
-
-<nav><div class="wrap nav-in">
-  <a class="mark" href="#">
-    <svg viewBox="0 0 32 32" fill="none"><path d="M16 28C16 18 10 14 4 14c0 8 5 14 12 14zm0 0c0-10 6-14 12-14 0 8-5 14-12 14zm0-2V4" stroke="#3a5743" stroke-width="2.2" stroke-linecap="round"/></svg>
-    <b>Grass Groomers</b>
-  </a>
-  <div class="nav-links">
-    <a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a>
-  </div>
-  <a class="nav-call" href="tel:4232976770">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    (423) 297-6770
-  </a>
-</div></nav>
-
-<header class="hero">
-  <div class="wrap hero-in">
-    <div>
-      <div class="kicker reveal d1">Chattanooga, TN · Est. 2013</div>
-      <h1 class="reveal d2">The yards people slow down for, <i>built by hand</i> for 13 years.</h1>
-    </div>
-    <div class="hero-side reveal d3">
-      <p>Design, installation, and year-round care for homes and businesses across the Chattanooga area. Free estimates, usually within the week.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-solid" href="tel:4232976770">Call (423) 297-6770</a>
-        <a class="btn btn-line" href="#services">What we do</a>
-      </div>
-    </div>
-  </div>
+<div class="ribbon">Free preview built for Grass Groomers by Hugh Rudolph Web Design · <a href="mailto:h3.rudolph@gmail.com">h3.rudolph@gmail.com</a></div>
+<header class="mast">
+  <div class="name">Grass Groomers</div>
+  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a href="tel:4232976770">(423) 297-6770</a></nav>
 </header>
-
-<div class="strip"><div class="wrap strip-in">
-  <div class="strip-item"><b>13 yrs</b><span>Serving Chattanooga</span></div>
-  <div class="strip-item"><b>Local</b><span>Owned &amp; operated</span></div>
-  <div class="strip-item"><b>Free</b><span>On-site estimates</span></div>
-  <div class="strip-item"><b>Insured</b><span>Licensed crew</span></div>
-</div></div>
-
-<section id="services"><div class="wrap">
-  <div class="sec-head">
-    <h2>What we do, season after season</h2>
-    <p>One crew, start to finish. No subcontractor roulette — the people who quote your project are the ones who show up to build it.</p>
-  </div>
-  <div class="svc">
-    <a class="svc-row" href="tel:4232976770">
-      <span class="svc-num">01</span><h3>Landscape design &amp; installation</h3>
-      <p>Planting plans, beds, sod, hardscape and grading — designed around how you actually use your yard.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a5743" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-    <a class="svc-row" href="tel:4232976770">
-      <span class="svc-num">02</span><h3>Lawn care &amp; maintenance</h3>
-      <p>Weekly or bi-weekly mowing, edging, seasonal cleanups and fertilization that keep the place sharp without you thinking about it.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a5743" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-    <a class="svc-row" href="tel:4232976770">
-      <span class="svc-num">03</span><h3>Tree &amp; shrub work</h3>
-      <p>Pruning, shaping, removal and storm cleanup — done safely, with the mess gone when we leave.</p>
-      <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a5743" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-    </a>
-  </div>
-</div></section>
-
-<section class="work" id="work"><div class="wrap">
-  <div class="sec-head">
-    <h2>Recent work around Chattanooga</h2>
-    <p>A few projects from the past few seasons. Photos go here — we'll swap in your real project shots.</p>
-  </div>
-  <div class="work-grid">
-    <figure class="ph ph-tall"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1400&auto=format&fit=crop" alt="Backyard landscape project" loading="lazy"><figcaption>Full backyard rebuild</figcaption></figure>
-    <figure class="ph ph-sm"><img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1200&auto=format&fit=crop" alt="Lawn and garden beds" loading="lazy"><figcaption>Bed installation</figcaption></figure>
-    <figure class="ph ph-sm"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop" alt="Planting detail" loading="lazy"><figcaption>Seasonal planting</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="about"><div class="wrap quote-grid">
+<div class="wrap">
+<section class="hero">
   <div>
-    <blockquote>"We treat every yard like the <em>whole neighborhood</em> is going to ask who did it. After 13 years here, they usually do."</blockquote>
-    <div class="attr"><b>The Grass Groomers crew</b>Grass Groomers Lawn &amp; Landscape</div>
+    <div class="kick">Lawn &amp; Landscape · Chattanooga</div>
+    <h1>A well-groomed yard says everything before you do.</h1>
+    <p>Thirteen years of lawn and landscape care across Chattanooga — and we answer the phone every day of the week.</p>
+    <div class="btns"><a class="b b1" href="tel:4232976770">Call (423) 297-6770</a><a class="b b2" href="#services">Our services</a></div>
   </div>
-  <div class="quote-side">
-    <div>
-      <h3>Local, not a franchise</h3>
-      <p>Grass Groomers Lawn &amp; Landscape has been Chattanooga-owned since 2013. When you call, you talk to someone who has stood in a yard like yours that morning.</p>
-    </div>
-    <div>
-      <h3>Straight quotes</h3>
-      <p>We walk the property, give you a number, and stick to it. No surprise line items after the work starts.</p>
-    </div>
+  <div class="frame">
+    <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop" alt="Groomed lawn and landscape">
+    <div class="badge">Open 7 days · <b>Est. 2013</b></div>
   </div>
-</div></section>
-
-<section class="contact" id="contact"><div class="wrap contact-in">
-  <div>
-    <h2>Get a free estimate this week</h2>
-    <p class="lead">Call or text — tell us what you're picturing, and we'll come take a look. No pressure, no obligation.</p>
-    <a class="tel" href="tel:4232976770">(423) 297-6770</a>
+</section>
+<section class="zz" id="services">
+  <div class="row">
+    <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1200&auto=format&fit=crop" alt="Lawn maintenance" loading="lazy">
+    <div class="txt"><span class="no">No. 1 — Lawn care</span><h3>Mowing &amp; maintenance</h3><p>Weekly or bi-weekly visits that keep edges crisp and the lawn even — without you ever chasing us down.</p><a href="tel:4232976770">Get a free quote</a></div>
   </div>
-  <div>
-    <div class="hours">
-      <div><span>Monday – Sunday</span><b>Open 24 hours</b></div>
-      <div><span>Service calls</span><b>Anytime</b></div>
-      <div><span>Estimates</span><b>Free</b></div>
-      <div><span>Service area</span><b>Chattanooga &amp; surrounding</b></div>
-    </div>
+  <div class="row rev">
+    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop" alt="Landscape beds" loading="lazy">
+    <div class="txt"><span class="no">No. 2 — Landscape</span><h3>Beds, mulch &amp; planting</h3><p>Fresh mulch, clean bed lines and plantings that fit the light and soil you actually have — not a catalog photo.</p><a href="tel:4232976770">Get a free quote</a></div>
   </div>
-</div></section>
-
-<footer><div class="wrap foot-in">
-  <div>© 2026 Grass Groomers Lawn &amp; Landscape · Chattanooga, TN</div>
-  <div>(423) 297-6770</div>
-</div></footer>
-
+</section>
+</div>
+<section class="quote" id="about"><p>"We groom lawns the way barbers cut hair — like our name is on it. Because it is."</p><span>The Grass Groomers crew · Chattanooga</span></section>
+<section class="contact wrap" id="contact">
+  <h2>Let's look at your yard</h2>
+  <p>Call or text any day — estimates are free, and quotes come the same week.</p>
+  <a class="tel" href="tel:4232976770">(423) 297-6770</a><br>
+  <span class="open"><span class="dot"></span>Open every day</span>
+</section>
+<footer>© 2026 Grass Groomers Lawn &amp; Landscape, LLC · 201 S Crest Rd, Chattanooga, TN</footer>
 </body>
 </html>
